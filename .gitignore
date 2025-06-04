@@ -1,0 +1,56 @@
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Logs
+logs/
+*.log
+*.log.*
+
+# Runtime
+dist/
+build/
+.cache/
+.vite/
+coverage/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor settings
+.vscode/
+.idea/
+
+# Env files
+.env
+.env.local
+.env.*.local
+.env.example  # If you plan to exclude it — or remove this line to include the example
+
+# Optional backup
+*.bak
+*.swp
+*~
+
+# Windows
+ehthumbs.db
+Desktop.ini
+
+# Optional: Docker
+docker-compose.override.yml
+
+# Tailwind JIT cache
+.tailwind/
+
+# Output from testing tools
+jest-html-reporters-*.html
+coverage/
+
+# Optional debug folders
+__pycache__/
+tmp/
+temp/
