@@ -1,8 +1,10 @@
 // Main entry point for the server-side 
-import express from 'express'; // Importing express framework
-import mongoose from 'mongoose'; // Importing mongoose for MongoDB interaction
-import dotenv from 'dotenv'; // Importing dotenv for environment variable management
-import cors from 'cors'; // Importing CORS middleware for handling cross-origin requests
+
+const express = require('express'); // Importing express framework
+const cors = require('cors'); // Importing CORS middleware for handling cross-origin requests
+const mongoose = require('mongoose'); // Importing mongoose for MongoDB interaction
+const dotenv = require('dotenv'); // Importing dotenv for environment variable management
+const routes = require('./routes/index'); // Importing routes from the routes directory
 
 dotenv.config(); // Load environment variables from .env file
 
@@ -13,11 +15,10 @@ app.use(cors()); // Enable CORS for all routes
 app.use(express.json()); // Parse incoming JSON requests
 
 // Routes
-import routes from './routes/index.js'; // Importing routes from the routes directory
 app.use('/api', routes); // Use the imported routes under the /api path
 
 // MongoDB connection
-mongoose.connect(process.env.MONGODB_URI)
+mongoose.connect(process.env.ATLAS_URI)
   .then(() => console.log('Connected to MongoDB')) // Log success message on successful connection
   .catch(err => console.error('MongoDB connection error:', err)); // Log error message on connection failure
 
