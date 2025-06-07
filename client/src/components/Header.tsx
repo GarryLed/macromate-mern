@@ -1,21 +1,30 @@
 // will remove this commponent later because it is not needed in the final version
 // and I will use the Navbar component instead
-import { Link } from 'react-router-dom';
 
-export default function Header() {
-    return (
-        <header className="bg-white shadow-md">
-            <nav className="flex gap-4 p-4">
-                <Link to="/" className="font-bold">MacroMate</Link>
-                <Link to="/meals" className="text-gray-700 hover:text-gray-900">Meals</Link>
-                <Link to="/recipes" className="text-gray-700 hover:text-gray-900">Recipes</Link>
-                <Link to="/grocery-list" className="text-gray-700 hover:text-gray-900">Grocery List</Link>
-                <Link to="/settings" className="text-gray-700 hover:text-gray-900">Settings</Link>
-                <Link to="/login" className="text-gray-700 hover:text-gray-900">Login</Link>
-                <Link to="/register" className="text-gray-700 hover:text-gray-900">Register</Link>
-                <Link to="/profile" className="text-gray-700 hover:text-gray-900">Profile</Link>
-                <Link to="/about" className="text-gray-700 hover:text-gray-900">About</Link>
-            </nav>
-        </header>
-    )
+
+
+
+const Header = () => {
+  return (
+    <header className="bg-white shadow-md">
+      <h1 className="text-2xl font-bold p-4">Welcome To MacroMate</h1>
+      <nav className="flex justify-between items-center p-4">
+        <ul className="flex space-x-6 text-sm font-medium text-gray-700">
+          <li>
+            <a href="/" className="hover:text-green-600 transition-colors">Home</a>
+          </li>
+          <li>
+            <a href="/about" className="hover:text-green-600 transition-colors">Aboout</a>
+          </li>
+          <li>
+            <a href="/contact" className="hover:text-green-600 transition-colors">Contact</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+  )
 }
+
+export default Header
+
+

@@ -1,0 +1,1 @@
+// Purpose: Keep data fetching and business logic out of components, similar to Angular’s HttpClient services.
